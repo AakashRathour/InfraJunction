@@ -1,0 +1,127 @@
+.header-Top {
+  height: 60px;
+  background: #ffffff;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  width: 100%;
+  border-bottom: 1px solid rgba(36, 39, 44, 0.1);
+}
+.headerBlock-menu {
+  border: 0;
+  float: left;
+  height: 46px;
+  margin: 7px 6px 7px 0;
+  padding: 0;
+  width: 18px;
+  background: 0 0;
+}
+.headerBlock-menu [data-icon="menu"] {
+  color: #24272c;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #ffd957;
+}
+.headerBlock-menu span::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #ffd957;
+}
+.headerBlock-menu span::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 3px;
+  background-color: #ffd957;
+}
+
+.infra-logo {
+  width: 100px;
+  float: left;
+  height: 46px;
+  background: url("../images/trucklogo.png") no-repeat;
+  background-size: contain;
+  margin: 6px 0 0 10px;
+}
+.amp-sidebar-mask {
+  background: transparent;
+  display: none;
+}
+.searchBlock {
+  display: flex;
+  justify-content: end;
+}
+
+.searchBlock .searchBlock-icon amp-img {
+  width: 15px;
+  height: 15px;
+}
+.header-bottom {
+  border-top: 1px solid rgba(36, 39, 44, 0.1);
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.header-bottom .headerMain-bottomLinks {
+  display: inline-block;
+  line-height: 42px;
+  margin-right: 0.8rem;
+  font-family: TJ-bold;
+  text-transform: uppercase;
+  font-size: 12.5px;
+  position: relative;
+  opacity: 0.85;
+}
+.header-bottom .headerMain-bottomLinks::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffd957;
+  transition: 0.1s ease-in-out;
+}
+.breadcrumbs ul {
+}
+.breadcrumbs ul li {
+  display: inline-block;
+  font-size: 12px;
+  position: relative;
+  padding-right: 13px;
+  margin-right: 4px;
+  margin-bottom: 0;
+}
+.breadcrumbs ul li a::after {
+  position: absolute;
+  content: "";
+  border: 1px solid rgba(36, 39, 44, 0.7);
+  border-width: 0 0 1px 1px;
+  width: 5px;
+  height: 5px;
+  transform: rotate(-135deg);
+  right: 2px;
+  top: 10px;
+}
+.newTrickerBlock {
+  overflow-x: hidden;
+}
+.newTrickerBlock .newswTicker a {
+  display: inline-block;
+  line-height: 36px;
+  margin-right: 15px;
+  padding-right: 15px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+.searchBlock .searchBlock-icon amp-img::before {
+  content: "";
+}

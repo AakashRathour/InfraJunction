@@ -1,0 +1,76 @@
+.searchBlock-icon {
+  background: #ffd957;
+  padding: 10px;
+  border-radius: 50%;
+  margin-top: 11px;
+}
+#tjampsearch {
+  width: 100%;
+  background: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  padding-right: 5px;
+  z-index: 999;
+}
+
+#tjampsearch .backArrow {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  top: 10px;
+  left: 0;
+  z-index: 99;
+}
+#tjampsearch [data-arrow-left] {
+  width: 13px;
+  height: 13px;
+  border-width: 2px 2px 0 0;
+  border-style: solid;
+  margin: 10px 0;
+  color: #fff;
+  position: absolute;
+  left: 18px;
+  top: 4px;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+#tjampsearch [data-arrow-left]:before {
+  border-radius: 2px;
+  position: absolute;
+  width: 16px;
+  height: 3px;
+  right: 0;
+  top: -2px;
+  -webkit-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-box-shadow: inset 0 0 0 32px;
+  box-shadow: inset 0 0 0 32px;
+  content: "";
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+#tjampsearch input[type="text"] {
+  border: none;
+  background: #fff;
+  border-radius: 3px;
+  width: 80%;
+  margin: 14px 0 0 12%;
+  height: 34px;
+  padding-left: 14px;
+  outline: 0;
+  color: #24272c;
+}
+#tjampsearchResults {
+  box-shadow: 0 0 5px rgb(0 0 0 / 40%);
+  background: #fff;
+  margin-right: -10px;
+  margin-left: -10px;
+  position: relative;
+  z-index: 1000;
+  top: -7px;
+  left: 0;
+  overflow: hidden;
+  width: 88%;
+}
