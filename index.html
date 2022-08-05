@@ -1,0 +1,983 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Infra Junction</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <!-- amp-sidebar -->
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
+
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+    <!-- stylesheet File -->
+    <link rel="stylesheet" href="../Infra_Junction/assets/css/style.css">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+    <noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+</head>
+
+<body>
+    <div class="header-Top">
+        <div class="container-mid">
+            <button on="tap:header-sidebar.toggle" class="headerBlock-menu">
+                <span data-icon="menu"></span>
+            </button>
+            <a href="#" class="infra-logo"></a>
+            <div class="searchBlock">
+                <span role="" tabindex="" on="tap:tjampsearch.show">
+                    <div class="searchBlock-icon">
+                        <span></span>
+                        <amp-img src="./assets/images/icons/search.svg" width="20" height="20" layout="responsive">
+                        </amp-img>
+                    </div>
+                </span>
+            </div>
+            <div>
+                <amp-state id="searchState">
+                    <script type="application/json">
+                    { "searchQuery": "" }
+                 </script>
+                </amp-state>
+                <div id="tjampsearch" hidden="">
+                    <span class="backArrow" role="search" tabindex="1"
+                        on="tap:tjampsearch.hide, tjampsearchResults.hide">
+                        <span data-arrow-left="true"></span>
+                    </span>
+                    <input type="text" tabindex="2" role="search" placeholder="Search Infra .." autocomplete="off"
+                        autofocus="autofocus" value="" [value]="" on="" />
+                </div>
+                <div id="tjampsearchResults" hidden="">
+                    <amp-list single-item items="." width="auto" height="200" src="" [src]="'" class="autosuggest-box"
+                        id="search-autosuggest-list" hidden [hidden]="">
+                    </amp-list>
+                </div>
+            </div>
+
+        </div>
+        <amp-sidebar id="header-sidebar" class="ampSidebar" layout="nodisplay">
+            <div class="close-btn">
+                <button on="tap:header-sidebar.toggle">
+                    <amp-img width="18" height="18" layout="fixed"
+                        src="https://cdn-icons-png.flaticon.com/512/61/61155.png" alt=""></amp-img>
+                </button>
+            </div>
+            <div class="sidebarTop">
+                <div class="login">
+
+                    <a href="#">
+                        <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/profile.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="Login/Register" class="boldfont">Login/Register</a>
+
+                </div>
+            </div>
+            <div class="buySellBtn">
+
+                <a href="#" class="sidebar-btn">Buy old Infra</a>
+                <a href="#" class="sidebar-btn">sell old Infra</a>
+                <!-- <ul>
+                    <li>
+                        <a href="#" title="Buy Old Truck" class="sidebar-btn">Buy Old Infra</a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sell Old Truck" class="sidebar-btn1">Sell Old Infra</a>
+                    </li>
+                </ul> -->
+            </div>
+            <ul class="menuAmp  ">
+                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Brands</a></li>
+                <li class="menuAmp-item">
+                    <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown ampDropdown">
+                        <section>
+                            <header class="menuAmp-link">Catagories</header>
+                            <ul>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Backhoe
+                                        Loader</a></li>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Compactor</a>
+                                </li>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Excavator</a>
+                                </li>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Telescopic
+                                        Handler</a></li>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Wheel
+                                        Loader</a>
+                                </li>
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
+                <li class="menuAmp-item">
+                    <amp-accordion layout="container" disable-session-states="" class="ampstart-dropdown ampDropdown">
+                        <section>
+                            <header class="menuAmp-link">Products</header>
+                            <ul>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">New
+                                        Products</a>
+                                </li>
+                                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Used
+                                        Products</a>
+                                </li>
+
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
+                <li class="menuAmp-item"><a href="#" class="menuAmp-link" title="tata">Compare</a></li>
+
+            </ul>
+            <div class="sidebarSocial text-center mt-3">
+                <p class="mt-3">Follow us on Social Media</p>
+                <div class="socialMedia mt-3">
+                    <a href="#" title="">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/facebook.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/twitter.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="linkedin">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/instagram.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="linkedin">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/linkedin.svg"
+                            alt="linkedin"></amp-img>
+                    </a>
+                </div>
+            </div>
+        </amp-sidebar>
+    </div>
+    <div class="header-bottom">
+        <div class="container-mid">
+            <a href="#" class="headerMain-bottomLinks">Home</a>
+            <a href="#" class="headerMain-bottomLinks">About</a>
+            <a href="#" class="headerMain-bottomLinks">Loan</a>
+            <a href="#" class="headerMain-bottomLinks">Career</a>
+            <a href="#" class="headerMain-bottomLinks">Contact</a>
+
+        </div>
+    </div>
+    <section class="breadcrumbs">
+        <div class="container-mid">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><span>News</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="newTrickerBlock">
+        <div class="newswTicker">
+            <marquee>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+                <a href="#" class="">Bajaj Auto Three Wheeler Sales Report July 2022 increased by 68%</a>
+            </marquee>
+        </div>
+    </section>
+    <section class="InfraNewsAMP">
+        <div class="container-mid">
+            <h1>INTRODUCING THE NEW CEV STAGE IV RANGE OF JCB BACKHOE LOADERS</h1>
+            <div class="InfraNewsImg">
+                <amp-img width="240" height="140" layout="responsive" src="assets/images/backhoeloader-3.jpg" alt="">
+                </amp-img>
+                <p class="graybackground sectionpadding20">Posted On : 04 August, 2022 </p>
+            </div>
+            <div class="InfraSocialMedia boldfont">
+                <span>Share News</span>
+                <div class="socialMedia mt-3">
+                    <a href="#" title="">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/facebook.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/twitter.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="linkedin">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/instagram.svg" alt="">
+                        </amp-img>
+                    </a>
+                    <a href="#" title="linkedin">
+                        <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/linkedin.svg"
+                            alt="linkedin"></amp-img>
+                    </a>
+                </div>
+
+            </div>
+            <div class="InfraNewsInner">
+                <h2 class="text-justify">
+                    Safalta Ka Sathi- New JCB 3DX Xtra
+                </h2>
+                <p class="text-justify">
+                    <span>
+                        Wherever your dreams take you, Your Partner in Success the new CEV Stage IV JCB 3DX Xtra
+                        Backhoe Loader supports you. Incorporating state-of-the-art technology which it has inherited
+                        from the EcoXPERT range, it is built to take on multiple challenges. The JCB 3DX XTRA matches
+                        your ambitions step by step.
+                    </span>
+                </p>
+
+                <p class="text-justify">
+                    <span>
+                        Wherever your dreams take you, Your Partner in Success the new CEV Stage IV JCB 3DX Xtra
+                        Backhoe Loader supports you. Incorporating state-of-the-art technology which it has inherited
+                        from the EcoXPERT range, it is built to take on multiple challenges. The JCB 3DX XTRA matches
+                        your ambitions step by step.
+                    </span>
+                </p>
+                <h2 class="text-justify">
+                    Access S1930E
+                </h2>
+                <P class="text-justify">
+                    The new <strong><a href="#"> Access S2632E </a></strong> comes with 9.92m working height and
+                    platform height of 8.1m
+                    with better
+                    productivity, safety & durability for all nature of jobs.
+                </P>
+                <p>
+                    <strong><a href="">1.Backhoe Loader </a></strong> <br>
+                    <strong><a href="">2. Backhoe Loader</a></strong> <br>
+                    <strong><a href="">3. Backhoe Loader</a></strong><br>
+                    <strong><a href=""> 4.Backhoe Loader</a></strong><br>
+                    <strong><a href=""> 5.Backhoe Loader</a></strong>
+                </p>
+
+                <h1> JCB BACKHOE LOADERS</h1>
+                <div class="InfraNewsImg">
+                    <amp-img width="240" height="140" layout="responsive" src="assets/images/backhoeloader-3.jpg"
+                        alt="">
+                    </amp-img>
+                    <p class="graybackground sectionpadding20">Posted On : 04 August, 2022 </p>
+                </div>
+                <p>
+                    <strong class="text-justify">
+                        Access S1930E
+                    </strong>
+                </p>
+                <P class="text-justify">
+
+                    The new JCB Access S2632E comes with 9.92m working height and platform height of 8.1m with better
+                    productivity, safety & durability for all nature of jobs.
+                </P>
+
+                <p>
+                    <strong class="text-justify">
+                        Access S1930E
+                    </strong>
+                </p>
+                <P class="text-justify">
+
+                    The new JCB Access S2632E comes with 9.92m working height<strong><a href="#"> Access S2632E
+                        </a></strong> and platform height of 8.1m with better
+                    productivity, safety &<strong><a href="#"> Access S2632E </a></strong> durability for all nature of
+                    jobs.
+                </P>
+
+                <p>
+                    <strong class="text-justify">
+                        Access S1930E
+                    </strong>
+                </p>
+                <P class="text-justify">
+
+                    The new JCB Access S2632E comes with 9.92m working height and platform height of 8.1m with better
+                    productivity, safety & durability for all<strong><a href="#"> Access S2632E </a></strong> nature of
+                    jobs.
+                </P>
+
+                <p class="text-justify SocialLink">
+                    <strong>Follow us for Latest Truck Industry Updates-
+                        <br>
+                        <br>
+                        FaceBook &nbsp;- <a href="https://www.facebook.com/"
+                            target="_blank">https://www.facebook.com/</a>
+                        <br>
+                        Instagram - <a href="https://www.instagram.com/"
+                            target="_blank">https://www.instagram.com/</a><br>
+                        Youtube &nbsp; &nbsp; - &nbsp;<a href="https://www.youtube.com/"
+                            target="_blank">https://www.youtube.com/</a></strong>
+                </p>
+
+                <div class="Infra-news-images-section sectionpadding20">
+                    <h1>News</h1>
+                    <div class="Infra-news-post-listing">
+                        <div class="Infra-news-related-item">
+                            <div class="Infra-news-post-thumbnail">
+                                <a href="#" class="img-1">
+                                    <amp-img width="240" height="140" layout="responsive"
+                                        src="assets/images/News/News-backhoe-loader.jpg" alt="">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="">
+                                    Dependable & Cost Effective Backhoe Loaders From ACE
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="Infra-news-related-item">
+                            <div class="Infra-news-post-thumbnail">
+                                <a href="#" class="img-1">
+                                    <amp-img width="240" height="140" layout="responsive"
+                                        src="assets/images/News/News-compactor.jpg" alt="">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="">
+                                    A compactor is a machine or mechanism used.
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="Infra-news-related-item">
+                            <div class="Infra-news-post-thumbnail">
+                                <a href="#" class="img-1">
+                                    <amp-img width="240" height="140" layout="responsive"
+                                        src="assets/images/News/News-skid-steer-loader.jpg" alt="">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="">
+                                    Dependable & Cost Effective Backhoe Loaders From ACE
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="Infra-news-related-item">
+                            <div class="Infra-news-post-thumbnail">
+                                <a href="#" class="img-1">
+                                    <amp-img width="240" height="140" layout="responsive"
+                                        src="assets/images/News/News-super-loader.jpg" alt="">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="">
+                                    Dependable & Cost Effective Backhoe Loaders From ACE
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="Infra-news-related-item">
+                            <div class="Infra-news-post-thumbnail">
+                                <a href="#" class="img-1">
+                                    <amp-img width="240" height="140" layout="responsive"
+                                        src="assets/images/News/News-telescopic-handler.jpg" alt="">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="">
+                                    Dependable & Cost Effective Backhoe Loaders From ACE
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="Infra-news-related-item">
+                            <div class="Infra-news-post-thumbnail">
+                                <a href="#" class="img-1">
+                                    <amp-img width="240" height="140" layout="responsive"
+                                        src="assets/images/wheelloader4.jpg" alt="">
+                                    </amp-img>
+                                </a>
+                            </div>
+                            <h2>
+                                <a href="">
+                                    Dependable & Cost Effective Backhoe Loaders From ACE
+                                </a>
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="newTrickerBlock">
+        <div class="newswTicker">
+            <marquee>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/backhoeloader-1.jpg" alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                    <p></p>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+                <a href="#" class="">
+                    <amp-img width="240" height="100" layout="fixed" src="assets/images/wheelloader4.jpg"
+                        alt="">
+                    </amp-img>
+                    <h2>News-wheeled-loader</h2>
+                </a>
+            </marquee>
+        </div>
+    </section>
+    <section class=" latest-news sectionpadding20 graybackground">
+        <div class="container-mid">
+            <h1>Latest News</h1>
+            <div class="latest-news-inner">
+                <div class="latest-news-col">
+                    <div class="latest-news-box sectionShadow">
+                        <a href="#">
+                            <div class="imgAmpContainer">
+                                <amp-img height="50" width="100" layout="responsive" src="assets/images/compactor2.jpg"
+                                    alt="">
+                                </amp-img>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-news-content">
+                        <a href="#">
+                            <p class="latest-news-title">
+                                अतुल ऑटो सेल्स रिपोर्ट जुलाई 2022 बिक्री में 45.5 प्रतिशत
+                                की
+                                वृद्धि
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="latest-news-col">
+                    <div class="latest-news-box sectionShadow">
+                        <a href="#">
+                            <div class="imgAmpContainer">
+                                <amp-img height="50" width="100" layout="responsive" src="assets/images/compactor3.jpg"
+                                    alt="">
+                                </amp-img>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-news-content">
+                        <a href="#">
+                            <p class="latest-news-title">
+                                अतुल ऑटो सेल्स रिपोर्ट जुलाई 2022 बिक्री में 45.5 प्रतिशत
+                                की
+                                वृद्धि
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="latest-news-col">
+                    <div class="latest-news-box sectionShadow">
+                        <a href="#">
+                            <div class="imgAmpContainer">
+                                <amp-img height="50" width="100" layout="responsive" src="assets/images/compactor4.jpg"
+                                    alt="">
+                                </amp-img>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-news-content">
+                        <a href="#">
+                            <p class="latest-news-title">
+                                अतुल ऑटो सेल्स रिपोर्ट जुलाई 2022 बिक्री में 45.5 प्रतिशत
+                                की
+                                वृद्धि
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="latest-news-col">
+                    <div class="latest-news-box sectionShadow">
+                        <a href="#">
+                            <div class="imgAmpContainer">
+                                <amp-img height="50" width="100" layout="responsive" src="assets/images/compactor2.jpg"
+                                    alt="">
+                                </amp-img>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-news-content">
+                        <a href="#">
+                            <p class="latest-news-title">
+                                अतुल ऑटो सेल्स रिपोर्ट जुलाई 2022 बिक्री में 45.5 प्रतिशत
+                                की
+                                वृद्धि
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="latest-news-col">
+                    <div class="latest-news-box sectionShadow">
+                        <a href="#">
+                            <div class="imgAmpContainer">
+                                <amp-img height="50" width="100" layout="responsive" src="assets/images/excavator-2.jpg"
+                                    alt="">
+                                </amp-img>
+
+                            </div>
+                        </a>
+                    </div>
+                    <div class="latest-news-content">
+                        <a href="#">
+                            <p class="latest-news-title">
+                                अतुल ऑटो सेल्स रिपोर्ट जुलाई 2022 बिक्री में 45.5 प्रतिशत
+                                की
+                                वृद्धि
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sectionpadding20 bt">
+        <div class="container-mid">
+            <div class="sectionHeading">
+                <h1>Popluer News</h1>
+            </div>
+            <div class="popular-news text-center tj-row">
+
+                <div class="popular-news-main tj-col">
+                    <a href="">
+                        <div class="popular-news-inner sectionShadow">
+                            <a>
+                                <amp-img width="240" height="140" layout="responsive"
+                                    src="assets/images/backhoeloader-1.jpg" alt="">
+                                </amp-img>
+                            </a>
+                            <p class="popular-news-title">
+                                Dependable & Cost Effective Backhoe Loaders From ACE
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="popular-news-main tj-col">
+                    <a href="">
+                        <div class="popular-news-inner sectionShadow">
+                            <a>
+                                <amp-img width="240" height="140" layout="responsive"
+                                    src="assets/images/backhoeloader-2.jpg" alt="">
+                                </amp-img>
+                            </a>
+                            <p class="popular-news-title">
+                                Dependable & Cost Effective Backhoe Loaders From ACE
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="popular-news-main tj-col">
+                    <a href="">
+                        <div class="popular-news-inner sectionShadow">
+                            <a>
+                                <amp-img width="240" height="140" layout="responsive"
+                                    src="assets/images/backhoeloader-3.jpg" alt="">
+                                </amp-img>
+                            </a>
+                            <p class="popular-news-title">
+                                Dependable & Cost Effective Backhoe Loaders From ACE
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="popular-news-main tj-col">
+                    <a href="">
+                        <div class="popular-news-inner sectionShadow">
+                            <a>
+                                <amp-img width="240" height="140" layout="responsive"
+                                    src="assets/images/backhoeloader-4.jpg" alt="">
+                                </amp-img>
+                            </a>
+                            <p class="popular-news-title">
+                                Dependable & Cost Effective Backhoe Loaders From ACE
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="popular-news-main tj-col">
+                    <a href="">
+                        <div class="popular-news-inner sectionShadow">
+                            <a>
+                                <amp-img width="240" height="140" layout="responsive" src="assets/images/compactor.jpg"
+                                    alt="">
+                                </amp-img>
+                            </a>
+                            <p class="popular-news-title">
+                                Dependable & Cost Effective Backhoe Loaders From ACE
+                            </p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="sectionpadding20 bt">
+        <div class="container-mid">
+            <div class="sectionHeading text-center">
+                <h2>Tools For Help</h2>
+                <p class="mb-4">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+            </div>
+            <div class="toolsBlock text-center tj-row">
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/service.svg" alt="">
+                            </amp-img>
+
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/body-makers.svg"
+                                alt="">
+                            </amp-img>
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/sapre-parts.svg"
+                                alt="">
+                            </amp-img>
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/body-makers.svg"
+                                alt="">
+                            </amp-img>
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/sapre-parts.svg"
+                                alt="">
+                            </amp-img>
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/body-makers.svg"
+                                alt="">
+                            </amp-img>
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/body-makers.svg"
+                                alt="">
+                            </amp-img>
+
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="toolsBlock-main tj-col">
+                    <a href="">
+                        <div class="toolsBlock-inner sectionShadow">
+                            <amp-img width="60" height="60" layout="fixed" src="assets/images/icons/body-makers.svg"
+                                alt="">
+                            </amp-img>
+                            <!-- <img src="assets/images/icons/body-makers.svg" class="img-fluid" alt=""> -->
+                            <p>Service Centers</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="graybac"></section>
+
+
+    <!-- Footer -->
+
+    <footer class="infraFooter">
+        <div class="infraFooter-Brand">
+            <div class="container-mid">
+                <div class="infraFooter-logo">
+                    <a class="#">
+                        <amp-img width="110" height="50" layout="fixed" src="assets/images/tjlogo.png" alt="">
+                        </amp-img>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="infraFooter-info ">
+            <div class="container-mid">
+                <div class="infraFooter-infoInner mb-20">
+                    <h1>QUICK LINKS</h1>
+                    <div class="infraFooter-infInnerSection">
+                        <div class="infraFooter-section1">
+                            <ul class="infraFooter-pageLinks">
+                                <li>
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">New Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">Used Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">Compare Product</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="infraFooter-section1">
+                            <ul class="infraFooter-pageLinks">
+                                <li>
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">New Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">Used Product</a>
+                                </li>
+                                <li>
+                                    <a href="#">Compare Product</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="infraFooter-infoInner mb-20">
+
+                    <div class="infraFooter-infInnerSection">
+
+                        <div class="infraFooter-section1">
+                            <h1>CONNECT WITH US</h1>
+                            <p>
+                                3rd Floor M M Tower, Agarsen Circle, Subhash Nagar Alwar, Rajasthan, 301001
+                            </p>
+                            <ul class="infraFooter-pageLinks">
+                                <li>
+
+                                    <amp-img width="15" height="15" layout="fixed" src="assets/images/icons/phone.svg"
+                                        alt="call" class="imgFilterInvert">
+                                    </amp-img> +0123456789
+
+                                </li>
+                                <li>
+
+                                    <amp-img width="15" height="15" layout="fixed" src="assets/images/icons/mail.svg"
+                                        alt="Email" class="imgFilterInvert">
+                                    </amp-img>
+                                    example@Infrajunction.com
+
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="infraFooter-section1">
+                            <h1>
+                                KEEP IN TOUCH
+                            </h1>
+                            <ul class="infraFooter-socialMedia">
+                                <li>
+                                    <a href="#">
+                                        <amp-img width="25" height="25" layout="fixed"
+                                            src="assets/images/icons/facebook.svg" alt="" class="socialMedia">
+                                        </amp-img>
+                                    </a>
+                                </li>
+                                <li>
+                                    <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/twitter.svg"
+                                        alt="" class="socialMedia">
+                                    </amp-img>
+                                </li>
+                                <li>
+                                    <amp-img width="25" height="25" layout="fixed"
+                                        src="assets/images/icons/instagram.svg" alt="" class="socialMedia">
+                                    </amp-img>
+                                </li>
+                                <li>
+                                    <amp-img width="25" height="25" layout="fixed" src="assets/images/icons/youtube.svg"
+                                        alt="" class="socialMedia">
+                                    </amp-img>
+                                </li>
+                                <li>
+                                    <amp-img width="25" height="25" layout="fixed"
+                                        src="assets/images/icons/linkedin.svg" alt="" class="socialMedia">
+                                    </amp-img>
+                                </li>
+                            </ul>
+                            <h1>DOWNLOAD OUR MOBILE APP</h1>
+                            <a class="" href="">
+                                <amp-img width="115" height="35" layout="fixed" src="assets/images/google-play-icon.png"
+                                    alt="" class="socialMedia">
+                                </amp-img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="infraFooter-copyright">
+            <div class="container-mid">
+                <div class="copyrightsection text-center">
+                    <p>© 2022 InfraJunction. All Rights Reserved.</p>
+                </div>
+                <div class="copyright-Footer-Link text-center">
+                    <a href="#">Advertise With Us</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+</body>
+
+</html>
